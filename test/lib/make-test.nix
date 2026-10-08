@@ -56,8 +56,6 @@ let
     extra-container.lib.buildContainers {
       inherit system legacyInstallDirs;
       config = {
-        imports = [ ./extra-container-workaround.nix ];
-
         # The container name has a 11 char length limit
         containers.nb-test = { config, ... }: {
           imports = [
